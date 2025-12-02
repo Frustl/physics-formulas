@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формулы по физике 10-11 класс</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            startup: {
+                ready: () => {
+                    console.log('MathJax is ready');
+                    MathJax.startup.defaultReady();
+                    MathJax.startup.promise.then(() => {
+                        console.log('MathJax typeset complete');
+                    });
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Формулы по физике</h1>
+            <p class="subtitle">10-11 класс • Система образования СНГ</p>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="#mechanics" class="nav-link">Механика</a></li>
+                <li><a href="#thermodynamics" class="nav-link">Термодинамика</a></li>
+                <li><a href="#electrodynamics" class="nav-link">Электродинамика</a></li>
+                <li><a href="#optics" class="nav-link">Оптика</a></li>
+                <li><a href="#quantum" class="nav-link">Квантовая физика</a></li>
+                <li><a href="#nuclear" class="nav-link">Ядерная физика</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="mechanics" class="section">
+            <h2>Механика</h2>
+            
+            <div class="subsection">
+                <h3>Кинематика</h3>
+                <div class="formula-grid">
+                    <div class="formula-card">
+                        <div class="formula">$$\vec{v} = \frac{d\vec{r}}{dt}$$</div>
+                        <p class="description">Скорость</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\vec{a} = \frac{d\vec{v}}{dt}$$</div>
+                        <p class="description">Ускорение</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$s = v_0 t + \frac{at^2}{2}$$</div>
+                        <p class="description">Перемещение при равноускоренном движении</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$v^2 = v_0^2 + 2as$$</div>
+                        <p class="description">Связь скорости и перемещения</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\omega = \frac{2\pi}{T} = 2\pi f$$</div>
+                        <p class="description">Угловая скорость</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$a_n = \frac{v^2}{R} = \omega^2 R$$</div>
+                        <p class="description">Центростремительное ускорение</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Динамика</h3>
+                <div class="formula-grid">
+                    <div class="formula-card important-formula" data-formula="newton-second-law" data-scientist="Исаак Ньютон" data-year="1687" data-applications="Расчет движения тел, инженерия, космонавтика">
+                        <div class="formula">$$\vec{F} = m\vec{a}$$</div>
+                        <p class="description">Второй закон Ньютона</p>
+                    </div>
+                    <div class="formula-card important-formula" data-formula="gravity-law" data-scientist="Исаак Ньютон" data-year="1687" data-applications="Астрономия, спутниковые системы, гравитационные расчеты">
+                        <div class="formula">$$F = G\frac{m_1 m_2}{r^2}$$</div>
+                        <p class="description">Закон всемирного тяготения</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$F = kx$$</div>
+                        <p class="description">Закон Гука</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$F = \mu N$$</div>
+                        <p class="description">Сила трения</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$p = mv$$</div>
+                        <p class="description">Импульс</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\vec{F}\Delta t = \Delta \vec{p}$$</div>
+                        <p class="description">Импульс силы</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Работа и энергия</h3>
+                <div class="formula-grid">
+                    <div class="formula-card">
+                        <div class="formula">$$A = Fs\cos\alpha$$</div>
+                        <p class="description">Работа силы</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$N = \frac{A}{t} = Fv\cos\alpha$$</div>
+                        <p class="description">Мощность</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$E_k = \frac{mv^2}{2}$$</div>
+                        <p class="description">Кинетическая энергия</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$E_p = mgh$$</div>
+                        <p class="description">Потенциальная энергия в поле тяжести</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$E_p = \frac{kx^2}{2}$$</div>
+                        <p class="description">Потенциальная энергия упругой деформации</p>
+                    </div>
+                    <div class="formula-card important-formula" data-formula="energy-conservation" data-scientist="Готфрид Лейбниц" data-year="1695" data-applications="Механика, энергетика, инженерные расчеты">
+                        <div class="formula">$$E_{полная} = E_k + E_p$$</div>
+                        <p class="description">Полная механическая энергия</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Колебания и волны</h3>
+                <div class="formula-grid">
+                    <div class="formula-card">
+                        <div class="formula">$$x = A\cos(\omega t + \varphi_0)$$</div>
+                        <p class="description">Уравнение гармонических колебаний</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$T = 2\pi\sqrt{\frac{m}{k}}$$</div>
+                        <p class="description">Период колебаний пружинного маятника</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$T = 2\pi\sqrt{\frac{l}{g}}$$</div>
+                        <p class="description">Период колебаний математического маятника</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$v = \lambda f$$</div>
+                        <p class="description">Скорость волны</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\omega = \sqrt{\frac{k}{m}}$$</div>
+                        <p class="description">Циклическая частота пружинного маятника</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="thermodynamics" class="section">
+            <h2>Термодинамика и молекулярная физика</h2>
+            
+            <div class="subsection">
+                <h3>Основы МКТ</h3>
+                <div class="formula-grid">
+                    <div class="formula-card">
+                        <div class="formula">$$p = nkT$$</div>
+                        <p class="description">Уравнение состояния идеального газа</p>
+                    </div>
+                    <div class="formula-card important-formula" data-formula="ideal-gas-law" data-scientist="Бенуа Клапейрон" data-year="1834" data-applications="Термодинамика, двигатели, климатология">
+                        <div class="formula">$$pV = \frac{m}{M}RT$$</div>
+                        <p class="description">Уравнение Менделеева-Клапейрона</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$E_k = \frac{3}{2}kT$$</div>
+                        <p class="description">Средняя кинетическая энергия молекулы</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\langle v \rangle = \sqrt{\frac{8kT}{\pi m}}$$</div>
+                        <p class="description">Средняя скорость молекул</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$v_{кв} = \sqrt{\frac{3kT}{m}}$$</div>
+                        <p class="description">Квадратичная скорость молекул</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Термодинамика</h3>
+                <div class="formula-grid">
+                    <div class="formula-card">
+                        <div class="formula">$$\Delta U = Q - A$$</div>
+                        <p class="description">Первый закон термодинамики</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$A = p\Delta V$$</div>
+                        <p class="description">Работа газа при изобарном процессе</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$Q = cm\Delta T$$</div>
+                        <p class="description">Количество теплоты</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\eta = \frac{A}{Q_1} = 1 - \frac{T_2}{T_1}$$</div>
+                        <p class="description">КПД тепловой машины (цикл Карно)</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\Delta S \geq \frac{Q}{T}$$</div>
+                        <p class="description">Второй закон термодинамики</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Агрегатные состояния</h3>
+                <div class="formula-grid">
+                    <div class="formula-card">
+                        <div class="formula">$$\rho = \frac{m}{V}$$</div>
+                        <p class="description">Плотность</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$p = \rho gh$$</div>
+                        <p class="description">Давление столба жидкости</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$F_A = \rho gV$$</div>
+                        <p class="description">Сила Архимеда</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$Q = \lambda m$$</div>
+                        <p class="description">Удельная теплота плавления</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$Q = Lm$$</div>
+                        <p class="description">Удельная теплота парообразования</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="electrodynamics" class="section">
+            <h2>Электродинамика</h2>
+            
+            <div class="subsection">
+                <h3>Электростатика</h3>
+                <div class="formula-grid">
+                    <div class="formula-card">
+                        <div class="formula">$$F = k\frac{q_1q_2}{r^2}$$</div>
+                        <p class="description">Закон Кулона</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$E = \frac{F}{q}$$</div>
+                        <p class="description">Напряженность электрического поля</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\varphi = \frac{W}{q}$$</div>
+                        <p class="description">Потенциал электрического поля</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$C = \frac{q}{U}$$</div>
+                        <p class="description">Электроемкость</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$W_e = \frac{qU}{2} = \frac{CU^2}{2}$$</div>
+                        <p class="description">Энергия электрического поля</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Постоянный ток</h3>
+                <div class="formula-grid">
+                    <div class="formula-card">
+                        <div class="formula">$$I = \frac{q}{t}$$</div>
+                        <p class="description">Сила тока</p>
+                    </div>
+                    <div class="formula-card important-formula" data-formula="ohm-law" data-scientist="Георг Ом" data-year="1827" data-applications="Электротехника, электроника, схемотехника">
+                        <div class="formula">$$U = IR$$</div>
+                        <p class="description">Закон Ома для участка цепи</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$R = \rho\frac{l}{S}$$</div>
+                        <p class="description">Сопротивление проводника</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$P = UI = I^2R = \frac{U^2}{R}$$</div>
+                        <p class="description">Мощность электрического тока</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$Q = I^2Rt$$</div>
+                        <p class="description">Закон Джоуля-Ленца</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\varepsilon = I(R + r)$$</div>
+                        <p class="description">Закон Ома для полной цепи</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Магнетизм</h3>
+                <div class="formula-grid">
+                    <div class="formula-card">
+                        <div class="formula">$$F = BIl\sin\alpha$$</div>
+                        <p class="description">Сила Ампера</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$F = qvB\sin\alpha$$</div>
+                        <p class="description">Сила Лоренца</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\Phi = BS\cos\alpha$$</div>
+                        <p class="description">Магнитный поток</p>
+                    </div>
+                    <div class="formula-card important-formula" data-formula="faraday-law" data-scientist="Майкл Фарадей" data-year="1831" data-applications="Генераторы, трансформаторы, электромоторы">
+                        <div class="formula">$$\varepsilon = -\frac{\Delta\Phi}{\Delta t}$$</div>
+                        <p class="description">Закон электромагнитной индукции Фарадея</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$L = \frac{\Phi}{I}$$</div>
+                        <p class="description">Индуктивность</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$W_m = \frac{LI^2}{2}$$</div>
+                        <p class="description">Энергия магнитного поля</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="optics" class="section">
+            <h2>Оптика</h2>
+            
+            <div class="subsection">
+                <h3>Геометрическая оптика</h3>
+                <div class="formula-grid">
+                    <div class="formula-card">
+                        <div class="formula">$$n = \frac{c}{v}$$</div>
+                        <p class="description">Абсолютный показатель преломления</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\frac{\sin\alpha}{\sin\beta} = n_{21}$$</div>
+                        <p class="description">Закон преломления света</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\sin\alpha_{пр} = \frac{n_2}{n_1}$$</div>
+                        <p class="description">Предельный угол полного внутреннего отражения</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\frac{1}{f} + \frac{1}{d} = \frac{1}{F}$$</div>
+                        <p class="description">Формула тонкой линзы</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\Gamma = \frac{f}{d}$$</div>
+                        <p class="description">Увеличение линзы</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Волновая оптика</h3>
+                <div class="formula-grid">
+                    <div class="formula-card">
+                        <div class="formula">$$\Delta x = \frac{\lambda L}{d}$$</div>
+                        <p class="description">Ширина интерференционной полосы</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$d\sin\varphi = k\lambda$$</div>
+                        <p class="description">Условие максимумов дифракционной решетки</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$I = I_0\cos^2\alpha$$</div>
+                        <p class="description">Закон Малюса</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\lambda = \frac{c}{\nu}$$</div>
+                        <p class="description">Длина волны</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quantum" class="section">
+            <h2>Квантовая физика</h2>
+            
+            <div class="subsection">
+                <h3>Квантовая оптика</h3>
+                <div class="formula-grid">
+                    <div class="formula-card">
+                        <div class="formula">$$E = h\nu$$</div>
+                        <p class="description">Энергия фотона</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$p = \frac{h}{\lambda}$$</div>
+                        <p class="description">Импульс фотона</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$A_{вых} = h\nu - E_k$$</div>
+                        <p class="description">Уравнение Эйнштейна для фотоэффекта</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\lambda = \frac{h}{mv}$$</div>
+                        <p class="description">Длина волны де Бройля</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Атомная физика</h3>
+                <div class="formula-grid">
+                    <div class="formula-card">
+                        <div class="formula">$$E_n = -\frac{13.6 эВ}{n^2}$$</div>
+                        <p class="description">Энергетические уровни атома водорода</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\frac{1}{\lambda} = R\left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right)$$</div>
+                        <p class="description">Формула Бальмера-Ридберга</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\Delta E = h\nu$$</div>
+                        <p class="description">Излучение при переходе между уровнями</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nuclear" class="section">
+            <h2>Ядерная физика</h2>
+            
+            <div class="subsection">
+                <h3>Ядерные реакции</h3>
+                <div class="formula-grid">
+                    <div class="formula-card important-formula" data-formula="einstein-mass-energy" data-scientist="Альберт Эйнштейн" data-year="1905" data-applications="Ядерная энергетика, астрофизика, физика частиц">
+                        <div class="formula">$$E = mc^2$$</div>
+                        <p class="description">Эквивалентность массы и энергии</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$\Delta E = \Delta m \cdot c^2$$</div>
+                        <p class="description">Энергия ядерной реакции</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$E_{связи} = \Delta m \cdot c^2$$</div>
+                        <p class="description">Энергия связи ядра</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$N(t) = N_0 \cdot 2^{-t/T_{1/2}}$$</div>
+                        <p class="description">Закон радиоактивного распада</p>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula">$$T_{1/2} = \frac{\ln 2}{\lambda}$$</div>
+                        <p class="description">Период полураспада</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Формулы по физике • Было сделано 1 учеником Средней школы №22 г.Витебска (с помощью 2 литров кофе)</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        console.log('Inline script works!');
+        alert('JavaScript работает! Нажмите OK для продолжения.');
+    </script>
+</body>
+</html>
